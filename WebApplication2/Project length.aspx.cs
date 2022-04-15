@@ -60,7 +60,7 @@ namespace WebApplication2
             }
         }
         // go button click event
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void Button1_Click1(object sender, EventArgs e)
         {
             getNames();
         }
@@ -83,7 +83,7 @@ namespace WebApplication2
                 if (result > 0)
                 {
 
-                    cmd = new SqlCommand("update project_list_tbl set current_stock = current_stock+1 WHERE project_id='" + TextBox1.Text.Trim() + "'", con);
+                    cmd = new SqlCommand("update project_list_tbl WHERE project_id='" + TextBox1.Text.Trim() + "'", con);
                     cmd.ExecuteNonQuery();
                     con.Close();
 
@@ -126,7 +126,7 @@ namespace WebApplication2
 
                 cmd.ExecuteNonQuery();
 
-                cmd = new SqlCommand("update  project_list_tbl set current_stock = current_stock-1 WHERE project_id='" + TextBox1.Text.Trim() + "'", con);
+                cmd = new SqlCommand("update  project_list_tbl WHERE project_id='" + TextBox1.Text.Trim() + "'", con);
 
                 cmd.ExecuteNonQuery();
 
@@ -293,6 +293,8 @@ namespace WebApplication2
                 Response.Write("<script>alert('" + ex.Message + "');</script>");
             }
         }
+
+
     }
 }
 

@@ -38,7 +38,7 @@
 									<label>Project ID</label>
 									<div class="input-group">
 										<asp:TextBox class="form-control" ID="TextBox1" runat="server" placeholder="Project ID"></asp:TextBox>
-										<asp:Button for="TextBox1" class="btn btn-dark" ID="Button1" runat="server" Text="Go"  />
+										<asp:Button for="TextBox1" class="btn btn-dark" ID="Button1" runat="server" Text="Go" OnClick="Button1_Click1"  />
 									</div>
 								</div>
 							</div>
